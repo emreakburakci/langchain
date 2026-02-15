@@ -1,12 +1,21 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
-const App = () => {
+const TodoUICode = () => {
   return (
     <div>
-      {JSON.stringify(yourAPIResponse, null, 2)}
+      <h1>Todo UI</h1>
+      <ul>
+        {todoItems.map((item, index) => (<li key={index}>{item.name}</li>))}
+      </ul>
     </div>
   );
-};
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const TodoNotificationCode = () => {
+  return (
+    <div>
+      <h1>Todo Notification</h1>
+      <p>Alert users when a task is due or completed!</p>
+    </div>
+  );
+
+export { TodoUICode, TodoNotificationCode };
